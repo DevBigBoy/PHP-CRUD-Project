@@ -32,7 +32,6 @@
                     $sql = "SELECT * FROM `users` ";
                     $result  = mysqli_query($conn, $sql);
                     if ($result) {
-                        $row = mysqli_fetch_assoc($result);
                         while ($row = mysqli_fetch_assoc($result)) {
                          echo '
                                 <tr>
@@ -43,12 +42,12 @@
                                     <td>'.$row['password'].'</td>
                                     <td class="d-flex justify-content-center">
                                         <button class="btn btn-primary mx-3">
-                                            <a href="update.php" class="text-light">
+                                            <a href="update.php?userId='.$row['id'].'" class="text-light">
                                                 Update
                                             </a>
                                         </button>
                                         <button class="btn btn-danger" >
-                                            <a href="delete.php" class="text-light">
+                                            <a href="delete.php?userId='.$row['id'].'" class="text-light">
                                                 Delete
                                             </a>
                                         </button>

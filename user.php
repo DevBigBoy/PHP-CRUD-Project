@@ -60,10 +60,6 @@ if(isset($_POST['submit'])){
             </div>
 
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-
-            <button class="btn btn-primary my-5">
-                <a href="index.php" class="text-light">Home</a>
-            </button>
         </form>
     </div>
 
